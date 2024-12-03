@@ -1,0 +1,157 @@
+// Kolory
+$primary-color: #4CAF50;
+$secondary-color: #008CBA;
+$danger-color: #f44336;
+$default-color: #e7e7e7;
+$info-color: #f1d548;
+
+$primary-hover: darken($primary-color, 10%);
+$secondary-hover: darken($secondary-color, 10%);
+$danger-hover: darken($danger-color, 10%);
+$info-hover: darken($info-color, 15%);
+
+body{
+  background-color: #1a1a1a;
+}
+h3{
+  color: white;
+}
+
+/* Stylowanie kontenera, w którym znajduje się stoper */
+.container_stoper {
+  width: 100%;
+  max-width: 500px; /* Ograniczenie szerokości kontenera */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgb(41, 41, 41); /* Białe tło dla kontrastu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lekkie cienie */
+  text-align: center;
+
+}
+
+/* Stylowanie wyświetlanych czasów (minuty, sekundy, milisekundy) */
+.time-display {
+  font-size: 25px; /* Duża czcionka dla widoczności */
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #ffffff; /* Kolor tekstu */
+  letter-spacing: 2px; /* Odstępy między cyframi */
+  margin: 20px 0;
+}
+/* Styl dla okręgów liczników */
+.container-time-circle {
+  display: flex;
+  justify-content: space-around; /* Rozkłada elementy w poziomie z równymi odstępami */
+  align-items: center; /* Wyrównuje elementy w pionie, jeśli mają różne wysokości */
+  gap: 20px; /* Opcjonalnie: Można dodać przestrzeń między elementami */
+}
+.time-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* szerokość okręgu */
+  height: 150px; /* wysokość okręgu */
+  background: radial-gradient(circle, #676464, #dcdcdc); /* Gradientowe tło */
+  border-radius: 50%; /* Tworzenie okręgu */
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  border: 2px solid #616060;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Cień wokół okręgu */
+  transition: all 0.3s ease;
+}
+
+/* Animacje dla okręgów, np. dla zmiany stanu */
+.time-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  border: 1px dashed rgba(0, 0, 0, 0.2); /* Jaśniejsza, subtelna linia */
+  margin: 20px auto;
+  width: 80%; /* Użycie procentowej szerokości, aby była responsywna */
+  max-width: 600px; /* Maksymalna szerokość */
+  height: auto;
+  padding: 20px;
+  border-radius: 12px; /* Zaokrąglone rogi */
+  background: #1e1d1d; /* Jasne tło */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lekkie cienie */
+  transition: all 0.3s ease; /* Płynna animacja */
+}
+
+.container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Większy cień przy najechaniu */
+}
+
+.button_container {
+  display: flex;
+  justify-content: center; /* Wyrównanie przycisków do środka */
+  gap: 15px; /* Równe odstępy między przyciskami */
+  margin-top: 20px;
+}
+
+.button {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Style dla kolorów
+.button-primary {
+  background-color: $primary-color;
+  color: white;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
+.button-secondary {
+  background-color: $secondary-color;
+  color: white;
+
+  &:hover {
+    background-color: $secondary-hover;
+  }
+}
+
+.button-danger {
+  background-color: $danger-color;
+  color: white;
+
+  &:hover {
+    background-color: $danger-hover;
+  }
+}
+
+.button-default {
+  background-color: $default-color;
+  color: black;
+
+  &:hover {
+    background-color: darken($default-color, 5%);
+  }
+}
+.button-info {
+  background-color: $info-color;
+  color: black;
+
+  &:hover {
+    background-color: $info-hover;
+  }
+}
